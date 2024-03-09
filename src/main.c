@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <getopt.h>
+#include "wczyt.h"
 
 int main(int argc, char *argv[]) {
   int dev, verb = 0;
@@ -51,6 +52,8 @@ int main(int argc, char *argv[]) {
     fprintf(stderr, "Błąd otwarcia pliku do pisania.\n");
     return 1;
   }
+  
+  wczyt(in, out, verb, dev);
 
 return 0;
 }
